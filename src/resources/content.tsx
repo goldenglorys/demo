@@ -1,0 +1,354 @@
+import {
+  About,
+  Blog,
+  Gallery,
+  Home,
+  Newsletter,
+  Person,
+  Social,
+  Work,
+} from "@/types";
+import { Line, Logo, Row, Text } from "@once-ui-system/core";
+
+const person: Person = {
+  firstName: "Dr. Mary",
+  lastName: "Asowata",
+  name: `Dr. Mary Asowata`,
+  role: "Nutritionist",
+  avatar: "/images/avatar.jpg",
+  email: "example@gmail.com",
+  location: "America/New_York", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English"],
+};
+
+const newsletter: Newsletter = {
+  display: true,
+  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  description: (
+    <>Get weekly nutrition tips and healthy recipes delivered to your inbox</>
+  ),
+};
+
+const social: Social = [
+  // Links are automatically displayed.
+  // Import new icons in /once-ui/icons.ts
+  {
+    name: "LinkedIn",
+    icon: "linkedin",
+    link: "https://www.linkedin.com/",
+  },
+  {
+    name: "Instagram",
+    icon: "instagram",
+    link: "https://instagram.com/",
+  },
+  {
+    name: "X",
+    icon: "x",
+    link: "https://www.x.com/",
+  },
+  {
+    name: "Email",
+    icon: "email",
+    link: `mailto:${person.email}`,
+  },
+];
+
+const home: Home = {
+  path: "/",
+  image: "/images/og/home.jpg",
+  label: "Home",
+  title: `${person.name} - Nutritionist`,
+  description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. ${person.role}`,
+  headline: <>Nam molestie tristique est vel consectetur</>,
+  featured: {
+    display: true,
+    title: (
+      <Row gap="12" vertical="center">
+        <strong className="ml-4">Ted X</strong>{" "}
+        <Line background="brand-alpha-strong" vert height="20" />
+        <Text marginRight="4" onBackground="brand-medium">
+          Featured work
+        </Text>
+      </Row>
+    ),
+    href: "/work/building-once-ui-a-customizable-design-system",
+  },
+  subline: (
+    <>
+      I'm {person.firstName}, a Lorem ipsum dolor sit amet, consectetur
+      adipiscing elit. <br />
+      Quisque finibus elementum leo, in mollis lacus pellentesque eget. Aenean
+      ullamcorper neque a malesuada bibendum.
+    </>
+  ),
+};
+
+const about: About = {
+  path: "/about",
+  label: "About",
+  title: `About – ${person.name}`,
+  description: `Learn more about ${person.name}'s approach to nutrition and wellness`,
+  tableOfContent: {
+    display: true,
+    subItems: false,
+  },
+  avatar: {
+    display: true,
+  },
+  calendar: {
+    display: true,
+    link: "https://cal.com",
+  },
+  intro: {
+    display: true,
+    title: "Introduction",
+    description: (
+      <>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat
+        volutpat. Sed consectetur sagittis ligula, euismod hendrerit diam
+        posuere nec. Morbi malesuada urna viverra eros vulputate, vehicula
+        suscipit ligula aliquam. Donec sed mauris diam. Donec pulvinar eget
+        dolor nec lacinia. Aliquam erat volutpat. Nam pretium, nulla vel gravida
+        pharetra, nunc mi mattis lacus, sodales aliquam massa nulla vitae augue.
+        Nullam sodales facilisis mauris quis porta. Pellentesque egestas sem non
+        felis tristique consectetur. Vestibulum dapibus varius diam, non
+        faucibus massa consequat vitae.
+      </>
+    ),
+  },
+  work: {
+    display: true, // set to false to hide this section
+    title: "Work Experience",
+    experiences: [
+      {
+        company: "Private Practice",
+        timeframe: "2020 - Present",
+        role: "Consultant Nutritionist",
+        achievements: [
+          <>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit
+            amet, consectetur adipiscing elit
+          </>,
+          <>
+            Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit.
+          </>,
+        ],
+        images: [
+          // optional: leave the array empty if you don't want to display images
+          {
+            src: "/images/projects/project-01/cover-01.jpg",
+            alt: "Project",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        company: "Wellness Center",
+        timeframe: "2015 - 2020",
+        role: "Senior Nutritionist",
+        achievements: [
+          <>
+            Quis nostrud exercitation ullamco laboris. Quis nostrud exercitation
+            ullamco laboris. Quis nostrud exercitation ullamco laboris.
+          </>,
+          <>
+            Duis aute irure dolor in reprehenderit. Duis aute irure dolor in
+            reprehenderit. Duis aute irure dolor in reprehenderit.
+          </>,
+        ],
+        images: [],
+      },
+    ],
+  },
+  studies: {
+    display: true,
+    title: "Education & Certifications",
+    institutions: [
+      {
+        name: "Master of Science in Nutrition",
+        description: (
+          <>
+            University Name, 2015. Specialization in Clinical Nutrition and
+            Dietetics.
+          </>
+        ),
+      },
+      {
+        name: "Certified Nutrition Specialist (CNS)",
+        description: (
+          <>Board for Certification of Nutrition Specialists, 2016</>
+        ),
+      },
+      {
+        name: "Certified Diabetes Educator",
+        description: <>Lorem ipsum dolor sit amet, 2018</>,
+      },
+    ],
+  },
+  technical: {
+    display: true,
+    title: "Areas of Expertise",
+    skills: [
+      {
+        title: "Weight Management",
+        description: (
+          <>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Personalized programs for sustainable weight loss and healthy weight
+            maintenance through balanced nutrition.
+          </>
+        ),
+        tags: [
+          {
+            name: "Weight",
+            icon: "figma",
+          },
+        ],
+        images: [
+          {
+            src: "/images/projects/project-01/cover-02.jpg",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/project-01/cover-03.jpg",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        title: "Disease Prevention & Management",
+        description: (
+          <>
+            Sed do eiusmod tempor incididunt ut labore. Specialized nutrition
+            strategies for diabetes, heart health, and metabolic conditions.
+          </>
+        ),
+        tags: [
+          {
+            name: "JavaScript",
+            icon: "javascript",
+          },
+          {
+            name: "Next.js",
+            icon: "nextjs",
+          },
+          {
+            name: "Supabase",
+            icon: "supabase",
+          },
+        ],
+        images: [
+          {
+            src: "/images/projects/project-01/cover-04.jpg",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        title: "Sports Nutrition",
+        description: (
+          <>
+            Ut enim ad minim veniam, quis nostrud. Performance optimization
+            through tailored nutrition plans for athletes and active
+            individuals.
+          </>
+        ),
+        tags: [],
+        images: [],
+      },
+      {
+        title: "Plant-Based Nutrition",
+        description: (
+          <>
+            Duis aute irure dolor in reprehenderit. Guidance on balanced
+            vegetarian and vegan diets with proper nutrient optimization.
+          </>
+        ),
+        tags: [],
+        images: [],
+      },
+    ],
+  },
+};
+
+const blog: Blog = {
+  path: "/blog",
+  label: "Blog",
+  title: "Writing about health and strength...",
+  description: `Read what ${person.name} has been up to recently`,
+  // Create new blog posts by adding a new .mdx file to app/blog/posts
+  // All posts will be listed on the /blog route
+};
+
+const work: Work = {
+  path: "/work",
+  label: "Work",
+  title: `Past Projects and Events – ${person.name}`,
+  description: `Design and dev projects by ${person.name}`,
+  // Create new project pages by adding a new .mdx file to app/work/projects
+  // All projects will be listed on the /home and /work routes
+};
+
+const gallery: Gallery = {
+  path: "/gallery",
+  label: "Gallery",
+  title: `Photo gallery – ${person.name}`,
+  description: `A photo collection by ${person.name}`,
+  // Images by https://lorant.one
+  // These are placeholder images, replace with your own
+  images: [
+    {
+      src: "/images/gallery/horizontal-1.jpg",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/vertical-4.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/horizontal-3.jpg",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/vertical-1.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/vertical-2.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/horizontal-2.jpg",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/horizontal-4.jpg",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/vertical-3.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+  ],
+};
+
+export { person, social, newsletter, home, about, blog, work, gallery };
