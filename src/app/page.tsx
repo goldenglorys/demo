@@ -144,6 +144,7 @@ import {
   Grid,
   Card,
   AutoScroll,
+  Accordion,
 } from "@once-ui-system/core";
 import { home, about, person, baseURL, routes } from "@/resources";
 import { Mailchimp } from "@/components";
@@ -324,7 +325,7 @@ export default function Home() {
               Services
             </Heading>
             <Text variant="body-default-l" onBackground="neutral-weak" align="center">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit
+              Evidence-based nutrition strategies tailored to your life
             </Text>
           </Column>
           <Grid columns="3" s={{ columns: 1 }} m={{ columns: 2 }} gap="16">
@@ -341,11 +342,11 @@ export default function Home() {
                   One-on-One Consultation
                 </Heading>
                 <Text variant="body-default-m" onBackground="neutral-weak">
-                  Lorem ipsum dolor sit amet, personalized nutrition assessment and customized meal planning tailored to your unique needs.
+                  Personalized nutrition assessment and customized strategies to help you achieve healthy eating habits that fit your lifestyle.
                 </Text>
               </Column>
             </Card>
-            
+
             <Card
               fillWidth
               padding="24"
@@ -356,14 +357,14 @@ export default function Home() {
               <Column gap="12">
                 <Icon name="book" size="l" onBackground="brand-medium" />
                 <Heading as="h3" variant="heading-strong-l">
-                  Custom Planning
+                  Group Workshops & Corporate Wellness
                 </Heading>
                 <Text variant="body-default-m" onBackground="neutral-weak">
-                  Consectetur adipiscing elit. Weekly meal plans designed around your lifestyle, preferences, and health goals.
+                  Interactive workshops and corporate programs promoting food literacy and healthy lifestyle choices for teams and communities.
                 </Text>
               </Column>
             </Card>
-            
+
             <Card
               fillWidth
               padding="24"
@@ -374,10 +375,10 @@ export default function Home() {
               <Column gap="12">
                 <Icon name="rocket" size="l" onBackground="brand-medium" />
                 <Heading as="h3" variant="heading-strong-l">
-                  Wellness Programs
+                  Workforce Nutrition
                 </Heading>
                 <Text variant="body-default-m" onBackground="neutral-weak">
-                  Sed do eiusmod tempor. Comprehensive programs for sustainable weight management and disease prevention strategies.
+                  Nutrition strategies for peak staff performance with half-day interactive workshops, recipes, action checklists, and follow-up support.
                 </Text>
               </Column>
             </Card>
@@ -485,8 +486,8 @@ export default function Home() {
 
       {/* FAQ Section */}
       <RevealFx translateY="16" delay={0.7}>
-        <Column fillWidth gap="32" marginTop="40" marginBottom="40">
-          <Column horizontal="center" align="center" gap="12">
+        <Column fillWidth gap="32" marginTop="40" marginBottom="40" horizontal="center">
+          <Column horizontal="center" align="center" gap="12" maxWidth="40">
             <Heading as="h2" variant="display-strong-s" align="center">
               FAQ - Quick Questions?
             </Heading>
@@ -495,74 +496,42 @@ export default function Home() {
             </Text>
           </Column>
 
-          <Column fillWidth gap="24" maxWidth="40">
-            <Card
-              fillWidth
-              padding="24"
-              border="neutral-alpha-weak"
-              background="surface"
-              radius="l"
+          <Column fillWidth maxWidth="40">
+            <Accordion
+              title="When is the Wellbeing Launchpad event?"
+              defaultOpen={false}
             >
-              <Column gap="12">
-                <Heading as="h3" variant="heading-strong-l">
-                  When is the Wellbeing Launchpad event?
-                </Heading>
-                <Text variant="body-default-m" onBackground="neutral-weak">
-                  We're launching sometime in April 2026! You can join our waitlist as a member to be the first to know the exact date and get early access.
-                </Text>
-              </Column>
-            </Card>
+              <Text variant="body-default-m" onBackground="neutral-weak">
+                We're launching sometime in April 2026! You can join our waitlist as a member to be the first to know the exact date and get early access.
+              </Text>
+            </Accordion>
 
-            <Card
-              fillWidth
-              padding="24"
-              border="neutral-alpha-weak"
-              background="surface"
-              radius="l"
+            <Accordion
+              title="How much will it cost?"
+              defaultOpen={false}
             >
-              <Column gap="12">
-                <Heading as="h3" variant="heading-strong-l">
-                  How much will it cost?
-                </Heading>
-                <Text variant="body-default-m" onBackground="neutral-weak">
-                  Pricing will be announced in January, but waitlist members get exclusive early bird pricing ($25 off) + special bonuses. Payment plans will be available.
-                </Text>
-              </Column>
-            </Card>
+              <Text variant="body-default-m" onBackground="neutral-weak">
+                Pricing will be announced in January, but waitlist members get exclusive early bird pricing ($25 off) + special bonuses. Payment plans will be available.
+              </Text>
+            </Accordion>
 
-            <Card
-              fillWidth
-              padding="24"
-              border="neutral-alpha-weak"
-              background="surface"
-              radius="l"
+            <Accordion
+              title="Is there any obligation to buy?"
+              defaultOpen={false}
             >
-              <Column gap="12">
-                <Heading as="h3" variant="heading-strong-l">
-                  Is there any obligation to buy?
-                </Heading>
-                <Text variant="body-default-m" onBackground="neutral-weak">
-                  None at all! The waitlist is completely free. You'll get updates, early access, and the option to join when we launch but zero pressure.
-                </Text>
-              </Column>
-            </Card>
+              <Text variant="body-default-m" onBackground="neutral-weak">
+                None at all! The waitlist is completely free. You'll get updates, early access, and the option to join when we launch but zero pressure.
+              </Text>
+            </Accordion>
 
-            <Card
-              fillWidth
-              padding="24"
-              border="neutral-alpha-weak"
-              background="surface"
-              radius="l"
+            <Accordion
+              title="What if I'm already on your Community newsletter?"
+              defaultOpen={false}
             >
-              <Column gap="12">
-                <Heading as="h3" variant="heading-strong-l">
-                  What if I'm already on your Community newsletter?
-                </Heading>
-                <Text variant="body-default-m" onBackground="neutral-weak">
-                  Perfect! Join the waitlist anyway to ensure you get the exclusive early bird pricing and bonuses. Waitlist members get special perks that regular newsletter subscribers won't receive.
-                </Text>
-              </Column>
-            </Card>
+              <Text variant="body-default-m" onBackground="neutral-weak">
+                Perfect! Join the waitlist anyway to ensure you get the exclusive early bird pricing and bonuses. Waitlist members get special perks that regular newsletter subscribers won't receive.
+              </Text>
+            </Accordion>
           </Column>
         </Column>
       </RevealFx>
