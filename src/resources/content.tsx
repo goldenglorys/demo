@@ -1,4 +1,4 @@
-import {
+import type {
   About,
   Blog,
   Gallery,
@@ -8,15 +8,15 @@ import {
   Social,
   Work,
 } from "@/types";
-import { Line, Logo, Row, Text } from "@once-ui-system/core";
+import { Button, Line, Logo, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
   firstName: "Dr. Mary",
   lastName: "Asowata",
-  name: `Dr. Mary Asowata`,
+  name: "Dr. Mary Asowata",
   role: "Nutritionist",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
+  email: "drmarynutritionclass@gmail.com",
   location: "America/New_York", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English"],
 };
@@ -35,12 +35,12 @@ const social: Social = [
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/",
+    link: "https://www.linkedin.com/in/mary-oyewole-asowata-phd-8b5b36114/",
   },
   {
     name: "Instagram",
     icon: "instagram",
-    link: "https://instagram.com/",
+    link: "https://instagram.com/nutritionwithdrmary",
   },
   {
     name: "X",
@@ -59,10 +59,11 @@ const home: Home = {
   image: "/images/og/home.jpg",
   label: "Home",
   title: `${person.name} - Nutritionist`,
-  description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. ${person.role}`,
-  headline: <>Nam molestie tristique est vel consectetur</>,
+  description:
+    "Get the answers no one is talking about. Helping busy moms rebuild their relationship with food.",
+  headline: <>Get the answers no one is talking about.</>,
   featured: {
-    display: true,
+    display: false,
     title: (
       <Row gap="12" vertical="center">
         <strong className="ml-4">Ted X</strong>{" "}
@@ -76,10 +77,28 @@ const home: Home = {
   },
   subline: (
     <>
-      I'm {person.firstName}, a Lorem ipsum dolor sit amet, consectetur
-      adipiscing elit. <br />
-      Quisque finibus elementum leo, in mollis lacus pellentesque eget. Aenean
-      ullamcorper neque a malesuada bibendum.
+      You already know how to lose weight, you've done it before. But keeping it
+      off while managing work, kids, and life? That's the hard part.
+      <br />
+      <br />
+      You've tried the diets, the tracking apps, the shakes, and still ended up
+      back at square one. Not because you're lazy or lack willpower, but because
+      no one ever helped you understand why you overeat or lose motivation when
+      life gets hectic.
+      <br />
+      <br />
+      That's where my coaching program comes in.
+      <br />
+      <br />
+      I help busy moms uncover what's really driving their habits, and rebuild
+      their relationship with food in a way that fits real life.
+      <br />
+      <br />
+      No guilt. No crash diets. No burnout.
+      <br />
+      <br />
+      Just lasting results that work for you. You've spent years taking care of
+      everyone else, now it's time to take care of you.
     </>
   ),
 };
@@ -98,22 +117,35 @@ const about: About = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://calendly.com/maryoyewoleasowatacoaching/30min?month=2025-11",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat
-        volutpat. Sed consectetur sagittis ligula, euismod hendrerit diam
-        posuere nec. Morbi malesuada urna viverra eros vulputate, vehicula
-        suscipit ligula aliquam. Donec sed mauris diam. Donec pulvinar eget
-        dolor nec lacinia. Aliquam erat volutpat. Nam pretium, nulla vel gravida
-        pharetra, nunc mi mattis lacus, sodales aliquam massa nulla vitae augue.
-        Nullam sodales facilisis mauris quis porta. Pellentesque egestas sem non
-        felis tristique consectetur. Vestibulum dapibus varius diam, non
-        faucibus massa consequat vitae.
+        Dr. Mary Asowata is a public health nutritionist with over a decade of
+        experience in translating nutrition evidence into actionable strategies
+        to help people achieve healthy eating habits.
+        <br />
+        <br />
+        The Wellbeing Matters' mission is to empower beneficiaries with food
+        literacy skills and provide community engagement to support healthy
+        diets and lifestyles. We believe everyone deserves access to resources
+        that empower them to make informed decisions about their health,
+        regardless of their lived experiences and demographics.
+        <br />
+        <strong>Explore my programs and digital products below:</strong>
+        <Button
+          id="wellbeing-launchpad"
+          data-border="rounded"
+          href="/work"
+          variant="primary"
+          size="s"
+          prefixIcon="rocket"
+        >
+          Work and Digital Products
+        </Button>
       </>
     ),
   },
@@ -126,16 +158,8 @@ const about: About = {
         timeframe: "2020 - Present",
         role: "Consultant Nutritionist",
         achievements: [
-          <>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit
-          </>,
-          <>
-            Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit.
-          </>,
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+          "Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
@@ -152,14 +176,8 @@ const about: About = {
         timeframe: "2015 - 2020",
         role: "Senior Nutritionist",
         achievements: [
-          <>
-            Quis nostrud exercitation ullamco laboris. Quis nostrud exercitation
-            ullamco laboris. Quis nostrud exercitation ullamco laboris.
-          </>,
-          <>
-            Duis aute irure dolor in reprehenderit. Duis aute irure dolor in
-            reprehenderit. Duis aute irure dolor in reprehenderit.
-          </>,
+          "Quis nostrud exercitation ullamco laboris. Quis nostrud exercitation ullamco laboris. Quis nostrud exercitation ullamco laboris.",
+          "Duis aute irure dolor in reprehenderit. Duis aute irure dolor in reprehenderit. Duis aute irure dolor in reprehenderit.",
         ],
         images: [],
       },
@@ -195,88 +213,125 @@ const about: About = {
     title: "Areas of Expertise",
     skills: [
       {
-        title: "Weight Management",
+        title: "Weight Management for Busy Moms",
         description: (
           <>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Personalized programs for sustainable weight loss and healthy weight
-            maintenance through balanced nutrition.
+            Specialized programs helping busy moms achieve sustainable weight
+            loss while managing work, kids, and life. Focus on understanding
+            eating behaviors and rebuilding relationships with food without
+            guilt or burnout.
           </>
         ),
         tags: [
           {
-            name: "Weight",
-            icon: "figma",
+            name: "Sustainable Weight Loss",
+            icon: "star",
+          },
+          {
+            name: "Behavioral Change",
+            icon: "person",
           },
         ],
         images: [
           {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
+            src: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80",
+            alt: "Healthy meal preparation",
             width: 16,
             height: 9,
           },
           {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
+            src: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&q=80",
+            alt: "Fresh healthy food",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        title: "Disease Prevention & Management",
+        title: "Food Literacy & Nutrition Education",
         description: (
           <>
-            Sed do eiusmod tempor incididunt ut labore. Specialized nutrition
-            strategies for diabetes, heart health, and metabolic conditions.
+            Empowering individuals and communities with food literacy skills to
+            make informed decisions about their health. Translating nutrition
+            evidence into actionable strategies that fit real life.
           </>
         ),
         tags: [
           {
-            name: "JavaScript",
-            icon: "javascript",
+            name: "Community Education",
+            icon: "book",
           },
           {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
+            name: "Evidence-Based",
+            icon: "lightbulb",
           },
         ],
         images: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
+            src: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=800&q=80",
+            alt: "Nutritious food education",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        title: "Sports Nutrition",
+        title: "Public Health Nutrition",
         description: (
           <>
-            Ut enim ad minim veniam, quis nostrud. Performance optimization
-            through tailored nutrition plans for athletes and active
-            individuals.
+            Over a decade of experience in public health nutrition, promoting
+            healthy diets and lifestyles across diverse communities. Advocating
+            for accessible health resources regardless of demographics or lived
+            experiences.
           </>
         ),
-        tags: [],
-        images: [],
+        tags: [
+          {
+            name: "Public Health",
+            icon: "globe",
+          },
+          {
+            name: "Community Wellness",
+            icon: "heart",
+          },
+        ],
+        images: [
+          {
+            src: "https://images.unsplash.com/photo-1511688878353-3a2f5be94cd7?w=800&q=80",
+            alt: "Community health and wellness",
+            width: 16,
+            height: 9,
+          },
+        ],
       },
       {
-        title: "Plant-Based Nutrition",
+        title: "Corporate Wellness & Workforce Nutrition",
         description: (
           <>
-            Duis aute irure dolor in reprehenderit. Guidance on balanced
-            vegetarian and vegan diets with proper nutrient optimization.
+            Nutrition strategies for peak staff performance through interactive
+            workshops and corporate wellness programs. Comprehensive support
+            including slide decks, recipes, action checklists, and follow-up for
+            lasting impact.
           </>
         ),
-        tags: [],
-        images: [],
+        tags: [
+          {
+            name: "Corporate Programs",
+            icon: "briefcase",
+          },
+          {
+            name: "Team Performance",
+            icon: "rocket",
+          },
+        ],
+        images: [
+          {
+            src: "https://images.unsplash.com/photo-1543362906-acfc16c67564?w=800&q=80",
+            alt: "Corporate wellness and nutrition",
+            width: 16,
+            height: 9,
+          },
+        ],
       },
     ],
   },
@@ -293,9 +348,9 @@ const blog: Blog = {
 
 const work: Work = {
   path: "/work",
-  label: "Work",
-  title: `Past Projects and Events – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
+  label: "Program",
+  title: `Explore my programs and digital products: – ${person.name}`,
+  description: `Programs and digital products by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/work/projects
   // All projects will be listed on the /home and /work routes
 };
