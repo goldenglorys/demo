@@ -1,4 +1,4 @@
-import {
+import type {
   DataStyleConfig,
   DisplayConfig,
   EffectsConfig,
@@ -196,7 +196,7 @@ const schema: SchemaConfig = {
 // social links
 const sameAs: SameAsConfig = {
   threads: "https://www.threads.com/",
-  linkedin: "https://www.linkedin.com/company/",
+  linkedin: "https://www.linkedin.com/in/mary-oyewole-asowata-phd-8b5b36114/",
   discord: "",
 };
 

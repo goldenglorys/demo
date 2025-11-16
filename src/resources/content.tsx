@@ -1,4 +1,4 @@
-import {
+import type {
   About,
   Blog,
   Gallery,
@@ -8,15 +8,15 @@ import {
   Social,
   Work,
 } from "@/types";
-import { Line, Logo, Row, Text } from "@once-ui-system/core";
+import { Button, Line, Logo, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
   firstName: "Dr. Mary",
   lastName: "Asowata",
-  name: `Dr. Mary Asowata`,
+  name: "Dr. Mary Asowata",
   role: "Nutritionist",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
+  email: "drmarynutritionclass@gmail.com",
   location: "America/New_York", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English"],
 };
@@ -35,12 +35,12 @@ const social: Social = [
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/",
+    link: "https://www.linkedin.com/in/mary-oyewole-asowata-phd-8b5b36114/",
   },
   {
     name: "Instagram",
     icon: "instagram",
-    link: "https://instagram.com/",
+    link: "https://instagram.com/nutritionwithdrmary",
   },
   {
     name: "X",
@@ -59,8 +59,9 @@ const home: Home = {
   image: "/images/og/home.jpg",
   label: "Home",
   title: `${person.name} - Nutritionist`,
-  description: `Get the answers no one is talking about. Helping busy moms rebuild their relationship with food.`,
-  headline: <>Get the answers no one is talking about...</>,
+  description:
+    "Get the answers no one is talking about. Helping busy moms rebuild their relationship with food.",
+  headline: <>Get the answers no one is talking about.</>,
   featured: {
     display: false,
     title: (
@@ -76,18 +77,28 @@ const home: Home = {
   },
   subline: (
     <>
-      You already know how to lose weight — you've done it before.
-      But keeping it off while managing work, kids, and life? That's the hard part.
-      <br /><br />
-      You've tried the diets, the tracking apps, the shakes… and still ended up back at square one. Not because you're lazy or lack willpower — but because no one ever helped you understand why you overeat or lose motivation when life gets hectic.
-      <br /><br />
+      You already know how to lose weight, you've done it before. But keeping it
+      off while managing work, kids, and life? That's the hard part.
+      <br />
+      <br />
+      You've tried the diets, the tracking apps, the shakes, and still ended up
+      back at square one. Not because you're lazy or lack willpower, but because
+      no one ever helped you understand why you overeat or lose motivation when
+      life gets hectic.
+      <br />
+      <br />
       That's where my coaching program comes in.
-      <br /><br />
-      I help busy moms uncover what's really driving their habits — and rebuild their relationship with food in a way that fits real life.
-      <br /><br />
+      <br />
+      <br />
+      I help busy moms uncover what's really driving their habits, and rebuild
+      their relationship with food in a way that fits real life.
+      <br />
+      <br />
       No guilt. No crash diets. No burnout.
-      <br /><br />
-      Just lasting results that work for you. You've spent years taking care of everyone else — now it's time to take care of you.
+      <br />
+      <br />
+      Just lasting results that work for you. You've spent years taking care of
+      everyone else, now it's time to take care of you.
     </>
   ),
 };
@@ -106,28 +117,35 @@ const about: About = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://calendly.com/maryoyewoleasowatacoaching/30min?month=2025-11",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Dr. Mary Asowata is a public health nutritionist with over a decade of experience in translating nutrition evidence into actionable strategies to help people achieve healthy eating habits.
-        <br /><br />
-        The Wellbeing Matters' mission is to empower beneficiaries with food literacy skills and provide community engagement to support healthy diets and lifestyles. We believe everyone deserves access to resources that empower them to make informed decisions about their health, regardless of their lived experiences and demographics.
-        <br /><br />
-        <strong>Book a 1:1 consultation:</strong> <a href="https://bit.ly/DrMaryConsultation" target="_blank" rel="noopener noreferrer">https://bit.ly/DrMaryConsultation</a>
-        <br /><br />
-        <strong>Explore my programs and digital products:</strong> Check out my <a href="/work">Work & Digital Products</a> page
-        <br /><br />
-        For collaboration/partnership, please email <a href="mailto:drmarynutritionclass@gmail.com">drmarynutritionclass@gmail.com</a>
-        <br /><br />
-        Follow us on Instagram: <a href="https://instagram.com/nutritionwithdrmary" target="_blank" rel="noopener noreferrer">@nutritionwithdrmary</a>
-        <br /><br />
-        © 2025 Dr Mary Asowata | Fuel Your Body Wisely
+        Dr. Mary Asowata is a public health nutritionist with over a decade of
+        experience in translating nutrition evidence into actionable strategies
+        to help people achieve healthy eating habits.
         <br />
-        Questions? Email: <a href="mailto:drmarynutritionclass@gmail.com">drmarynutritionclass@gmail.com</a>
+        <br />
+        The Wellbeing Matters' mission is to empower beneficiaries with food
+        literacy skills and provide community engagement to support healthy
+        diets and lifestyles. We believe everyone deserves access to resources
+        that empower them to make informed decisions about their health,
+        regardless of their lived experiences and demographics.
+        <br />
+        <strong>Explore my programs and digital products below:</strong>
+        <Button
+          id="wellbeing-launchpad"
+          data-border="rounded"
+          href="/work"
+          variant="primary"
+          size="s"
+          prefixIcon="rocket"
+        >
+          Work and Digital Products
+        </Button>
       </>
     ),
   },
@@ -140,16 +158,8 @@ const about: About = {
         timeframe: "2020 - Present",
         role: "Consultant Nutritionist",
         achievements: [
-          <>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit
-          </>,
-          <>
-            Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit.
-          </>,
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+          "Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
@@ -166,14 +176,8 @@ const about: About = {
         timeframe: "2015 - 2020",
         role: "Senior Nutritionist",
         achievements: [
-          <>
-            Quis nostrud exercitation ullamco laboris. Quis nostrud exercitation
-            ullamco laboris. Quis nostrud exercitation ullamco laboris.
-          </>,
-          <>
-            Duis aute irure dolor in reprehenderit. Duis aute irure dolor in
-            reprehenderit. Duis aute irure dolor in reprehenderit.
-          </>,
+          "Quis nostrud exercitation ullamco laboris. Quis nostrud exercitation ullamco laboris. Quis nostrud exercitation ullamco laboris.",
+          "Duis aute irure dolor in reprehenderit. Duis aute irure dolor in reprehenderit. Duis aute irure dolor in reprehenderit.",
         ],
         images: [],
       },
@@ -212,8 +216,10 @@ const about: About = {
         title: "Weight Management for Busy Moms",
         description: (
           <>
-            Specialized programs helping busy moms achieve sustainable weight loss while managing work, kids, and life.
-            Focus on understanding eating behaviors and rebuilding relationships with food without guilt or burnout.
+            Specialized programs helping busy moms achieve sustainable weight
+            loss while managing work, kids, and life. Focus on understanding
+            eating behaviors and rebuilding relationships with food without
+            guilt or burnout.
           </>
         ),
         tags: [
@@ -245,8 +251,9 @@ const about: About = {
         title: "Food Literacy & Nutrition Education",
         description: (
           <>
-            Empowering individuals and communities with food literacy skills to make informed decisions about their health.
-            Translating nutrition evidence into actionable strategies that fit real life.
+            Empowering individuals and communities with food literacy skills to
+            make informed decisions about their health. Translating nutrition
+            evidence into actionable strategies that fit real life.
           </>
         ),
         tags: [
@@ -272,8 +279,10 @@ const about: About = {
         title: "Public Health Nutrition",
         description: (
           <>
-            Over a decade of experience in public health nutrition, promoting healthy diets and lifestyles across diverse communities.
-            Advocating for accessible health resources regardless of demographics or lived experiences.
+            Over a decade of experience in public health nutrition, promoting
+            healthy diets and lifestyles across diverse communities. Advocating
+            for accessible health resources regardless of demographics or lived
+            experiences.
           </>
         ),
         tags: [
@@ -299,8 +308,10 @@ const about: About = {
         title: "Corporate Wellness & Workforce Nutrition",
         description: (
           <>
-            Nutrition strategies for peak staff performance through interactive workshops and corporate wellness programs.
-            Comprehensive support including slide decks, recipes, action checklists, and follow-up for lasting impact.
+            Nutrition strategies for peak staff performance through interactive
+            workshops and corporate wellness programs. Comprehensive support
+            including slide decks, recipes, action checklists, and follow-up for
+            lasting impact.
           </>
         ),
         tags: [
@@ -337,9 +348,9 @@ const blog: Blog = {
 
 const work: Work = {
   path: "/work",
-  label: "Work",
-  title: `Past Projects and Events – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
+  label: "Program",
+  title: `Explore my programs and digital products: – ${person.name}`,
+  description: `Programs and digital products by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/work/projects
   // All projects will be listed on the /home and /work routes
 };
