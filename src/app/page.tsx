@@ -142,7 +142,7 @@ export default function Home() {
             paddingBottom="32"
           >
             <Text
-              wrap="normal"
+              // wrap="normal"
               onBackground="neutral-weak"
               variant="body-default-m"
             >
