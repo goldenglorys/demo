@@ -59,10 +59,10 @@ const home: Home = {
   image: "/images/og/home.jpg",
   label: "Home",
   title: `${person.name} - Nutritionist`,
-  description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. ${person.role}`,
-  headline: <>Nam molestie tristique est vel consectetur</>,
+  description: `Get the answers no one is talking about. Helping busy moms rebuild their relationship with food.`,
+  headline: <>Get the answers no one is talking about...</>,
   featured: {
-    display: true,
+    display: false,
     title: (
       <Row gap="12" vertical="center">
         <strong className="ml-4">Ted X</strong>{" "}
@@ -76,10 +76,18 @@ const home: Home = {
   },
   subline: (
     <>
-      I'm {person.firstName}, a Lorem ipsum dolor sit amet, consectetur
-      adipiscing elit. <br />
-      Quisque finibus elementum leo, in mollis lacus pellentesque eget. Aenean
-      ullamcorper neque a malesuada bibendum.
+      You already know how to lose weight — you've done it before.
+      But keeping it off while managing work, kids, and life? That's the hard part.
+      <br /><br />
+      You've tried the diets, the tracking apps, the shakes… and still ended up back at square one. Not because you're lazy or lack willpower — but because no one ever helped you understand why you overeat or lose motivation when life gets hectic.
+      <br /><br />
+      That's where my coaching program comes in.
+      <br /><br />
+      I help busy moms uncover what's really driving their habits — and rebuild their relationship with food in a way that fits real life.
+      <br /><br />
+      No guilt. No crash diets. No burnout.
+      <br /><br />
+      Just lasting results that work for you. You've spent years taking care of everyone else — now it's time to take care of you.
     </>
   ),
 };
@@ -105,15 +113,25 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat
-        volutpat. Sed consectetur sagittis ligula, euismod hendrerit diam
-        posuere nec. Morbi malesuada urna viverra eros vulputate, vehicula
-        suscipit ligula aliquam. Donec sed mauris diam. Donec pulvinar eget
-        dolor nec lacinia. Aliquam erat volutpat. Nam pretium, nulla vel gravida
-        pharetra, nunc mi mattis lacus, sodales aliquam massa nulla vitae augue.
-        Nullam sodales facilisis mauris quis porta. Pellentesque egestas sem non
-        felis tristique consectetur. Vestibulum dapibus varius diam, non
-        faucibus massa consequat vitae.
+        Dr. Mary Asowata is a public health nutritionist with over a decade of experience in translating nutrition evidence into actionable strategies to help people achieve healthy eating habits.
+        <br /><br />
+        The Wellbeing Matters' mission is to empower beneficiaries with food literacy skills and provide community engagement to support healthy diets and lifestyles. We believe everyone deserves access to resources that empower them to make informed decisions about their health, regardless of their lived experiences and demographics.
+        <br /><br />
+        <strong>Book a 1:1 consultation:</strong> <a href="https://bit.ly/DrMaryConsultation" target="_blank" rel="noopener noreferrer">https://bit.ly/DrMaryConsultation</a>
+        <br /><br />
+        <strong>Purchase my digital products:</strong>
+        <br />
+        • Well-being Launchpad: <a href="https://bit.ly/WellbeingLaunchpad" target="_blank" rel="noopener noreferrer">https://bit.ly/WellbeingLaunchpad</a>
+        <br />
+        • Fuel Your Body Wisely Course: <a href="https://bit.ly/FuelYourBodyWisely" target="_blank" rel="noopener noreferrer">https://bit.ly/FuelYourBodyWisely</a>
+        <br /><br />
+        For collaboration/partnership, please email <a href="mailto:drmarynutritionclass@gmail.com">drmarynutritionclass@gmail.com</a>
+        <br /><br />
+        Follow us on Instagram: <a href="https://instagram.com/nutritionwithdrmary" target="_blank" rel="noopener noreferrer">@nutritionwithdrmary</a>
+        <br /><br />
+        © 2025 Dr Mary Asowata | Fuel Your Body Wisely
+        <br />
+        Questions? Email: <a href="mailto:drmarynutritionclass@gmail.com">drmarynutritionclass@gmail.com</a>
       </>
     ),
   },

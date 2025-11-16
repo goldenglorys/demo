@@ -261,10 +261,20 @@ export default function Home() {
           <RevealFx paddingTop="12" delay={0.4} horizontal="center">
             <Row gap="16" wrap>
               <Button
+                id="wellbeing-launchpad"
+                data-border="rounded"
+                href="https://bit.ly/WellbeingLaunchpad"
+                variant="primary"
+                size="l"
+                prefixIcon="rocket"
+              >
+                Join My Wellbeing Launchpad Program
+              </Button>
+              <Button
                 id="about"
                 data-border="rounded"
                 href={about.path}
-                variant="primary"
+                variant="secondary"
                 size="l"
                 prefixIcon="person"
               >
@@ -472,6 +482,90 @@ export default function Home() {
           </Row>
         </Column>
       )}
+
+      {/* FAQ Section */}
+      <RevealFx translateY="16" delay={0.7}>
+        <Column fillWidth gap="32" marginTop="40" marginBottom="40">
+          <Column horizontal="center" align="center" gap="12">
+            <Heading as="h2" variant="display-strong-s" align="center">
+              FAQ - Quick Questions?
+            </Heading>
+            <Text variant="body-default-l" onBackground="neutral-weak" align="center">
+              About the In-person Event in 2026
+            </Text>
+          </Column>
+
+          <Column fillWidth gap="24" maxWidth="40">
+            <Card
+              fillWidth
+              padding="24"
+              border="neutral-alpha-weak"
+              background="surface"
+              radius="l"
+            >
+              <Column gap="12">
+                <Heading as="h3" variant="heading-strong-l">
+                  When is the Wellbeing Launchpad event?
+                </Heading>
+                <Text variant="body-default-m" onBackground="neutral-weak">
+                  We're launching sometime in April 2026! You can join our waitlist as a member to be the first to know the exact date and get early access.
+                </Text>
+              </Column>
+            </Card>
+
+            <Card
+              fillWidth
+              padding="24"
+              border="neutral-alpha-weak"
+              background="surface"
+              radius="l"
+            >
+              <Column gap="12">
+                <Heading as="h3" variant="heading-strong-l">
+                  How much will it cost?
+                </Heading>
+                <Text variant="body-default-m" onBackground="neutral-weak">
+                  Pricing will be announced in January, but waitlist members get exclusive early bird pricing ($25 off) + special bonuses. Payment plans will be available.
+                </Text>
+              </Column>
+            </Card>
+
+            <Card
+              fillWidth
+              padding="24"
+              border="neutral-alpha-weak"
+              background="surface"
+              radius="l"
+            >
+              <Column gap="12">
+                <Heading as="h3" variant="heading-strong-l">
+                  Is there any obligation to buy?
+                </Heading>
+                <Text variant="body-default-m" onBackground="neutral-weak">
+                  None at all! The waitlist is completely free. You'll get updates, early access, and the option to join when we launch but zero pressure.
+                </Text>
+              </Column>
+            </Card>
+
+            <Card
+              fillWidth
+              padding="24"
+              border="neutral-alpha-weak"
+              background="surface"
+              radius="l"
+            >
+              <Column gap="12">
+                <Heading as="h3" variant="heading-strong-l">
+                  What if I'm already on your Community newsletter?
+                </Heading>
+                <Text variant="body-default-m" onBackground="neutral-weak">
+                  Perfect! Join the waitlist anyway to ensure you get the exclusive early bird pricing and bonuses. Waitlist members get special perks that regular newsletter subscribers won't receive.
+                </Text>
+              </Column>
+            </Card>
+          </Column>
+        </Column>
+      </RevealFx>
 
       {/* Newsletter */}
       <Mailchimp />
