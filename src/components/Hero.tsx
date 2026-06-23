@@ -12,7 +12,7 @@ export default function Hero() {
         style={{
           background: "#1e5c45",
           minHeight: "88vh",
-          paddingTop: 64,
+          paddingTop: 76,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",

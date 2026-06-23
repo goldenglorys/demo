@@ -2,7 +2,7 @@ import Reveal from "./Reveal";
 
 export default function Sessions() {
   return (
-    <section style={{ background: "#fff", padding: "100px 0" }}>
+    <section style={{ background: "#f4f3f2", padding: "100px 0" }}>
       <div style={{ maxWidth: 1160, margin: "0 auto", padding: "0 24px" }}>
 
         <div className="grid lg:grid-cols-2 gap-20 items-start">

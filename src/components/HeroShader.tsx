@@ -36,10 +36,10 @@ export default function HeroShader() {
         colors={["#ffffff", "#f97316", "#b8dfc8"]}
         colorBack="#1e5c45"
         stepsPerColor={4}
-        size={0.2}
-        sizeRange={0.16}
-        spreading={0.85}
-        speed={0.6}
+        size={0.3}
+        sizeRange={0.21}
+        spreading={1}
+        speed={1.1}
         scale={0.3}
       />
     </div>

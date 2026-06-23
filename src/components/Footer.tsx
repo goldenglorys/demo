@@ -135,8 +135,8 @@ export default function Footer() {
         <a href="#" style={{ textDecoration: "none", flexShrink: 0 }}>
           <div
             style={{
-              width: 110,
-              height: 40,
+              width: 150,
+              height: 58,
               borderRadius: 8,
               overflow: "hidden",
               position: "relative",
@@ -147,7 +147,7 @@ export default function Footer() {
               alt="The Well-being Matters"
               fill
               style={{ objectFit: "cover", objectPosition: "center 42%" }}
-              sizes="110px"
+              sizes="150px"
             />
           </div>
         </a>

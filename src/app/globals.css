@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  background: #fff;
+  background: #f4f3f2;
   color: #111;
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   line-height: 1.6;
@@ -60,36 +60,135 @@ body {
 .reveal.delay-3 { transition-delay: 0.3s; }
 .reveal.delay-4 { transition-delay: 0.4s; }
 
-/* ── Button interactions ── */
+/* ── Liquid glass nav link hover ── */
+.nav-link:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+/* ── Liquid glass buttons ── */
+
+/* Orange — primary CTA */
 .btn-orange {
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  position: relative;
+  background: rgba(249, 115, 22, 0.88) !important;
+  border: 1px solid rgba(255, 255, 255, 0.28) !important;
+  backdrop-filter: blur(12px) saturate(1.6);
+  -webkit-backdrop-filter: blur(12px) saturate(1.6);
+  box-shadow:
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.38),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1),
+    0 4px 16px rgba(249, 115, 22, 0.32),
+    0 1px 4px rgba(0, 0, 0, 0.08) !important;
+  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.2s ease,
+              background 0.2s ease;
 }
 .btn-orange:hover {
+  background: rgba(249, 115, 22, 0.96) !important;
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 10px 32px rgba(249, 115, 22, 0.45);
+  box-shadow:
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.42),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.12),
+    0 10px 32px rgba(249, 115, 22, 0.52),
+    0 2px 8px rgba(0, 0, 0, 0.1) !important;
 }
+.btn-orange:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    inset 0 1px 4px rgba(0, 0, 0, 0.12),
+    0 2px 8px rgba(249, 115, 22, 0.3) !important;
+}
+
+/* Green — secondary CTA */
 .btn-green {
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  position: relative;
+  background: rgba(30, 92, 69, 0.88) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(12px) saturate(1.6);
+  -webkit-backdrop-filter: blur(12px) saturate(1.6);
+  box-shadow:
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.28),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.12),
+    0 4px 16px rgba(30, 92, 69, 0.32),
+    0 1px 4px rgba(0, 0, 0, 0.08) !important;
+  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.2s ease;
 }
 .btn-green:hover {
+  background: rgba(30, 92, 69, 0.96) !important;
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 10px 32px rgba(30, 92, 69, 0.5);
+  box-shadow:
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.32),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.12),
+    0 10px 32px rgba(30, 92, 69, 0.48),
+    0 2px 8px rgba(0, 0, 0, 0.1) !important;
 }
+.btn-green:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Outline orange */
 .btn-outline-orange {
-  transition: transform 0.18s ease, background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+  background: rgba(249, 115, 22, 0) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    0 1px 4px rgba(0, 0, 0, 0.06) !important;
+  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1),
+              background 0.2s ease,
+              color 0.2s ease,
+              box-shadow 0.2s ease;
 }
 .btn-outline-orange:hover {
-  background-color: #f97316 !important;
+  background: rgba(249, 115, 22, 0.88) !important;
   color: #fff !important;
-  border-color: #f97316 !important;
+  border-color: rgba(249, 115, 22, 0.6) !important;
   transform: translateY(-2px);
+  box-shadow:
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.38),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1),
+    0 8px 24px rgba(249, 115, 22, 0.42) !important;
 }
+.btn-outline-orange:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Ghost — on dark backgrounds */
 .btn-ghost {
-  transition: background-color 0.18s ease, transform 0.18s ease;
+  backdrop-filter: blur(14px) saturate(1.4);
+  -webkit-backdrop-filter: blur(14px) saturate(1.4);
+  box-shadow:
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.08),
+    0 2px 8px rgba(0, 0, 0, 0.12) !important;
+  transition: background-color 0.2s ease,
+              transform 0.2s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.2s ease;
 }
 .btn-ghost:hover {
-  background-color: rgba(255, 255, 255, 0.2) !important;
+  background-color: rgba(255, 255, 255, 0.22) !important;
   transform: translateY(-2px);
+  box-shadow:
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.28),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1),
+    0 6px 20px rgba(0, 0, 0, 0.18) !important;
+}
+.btn-ghost:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* ── Premium card ── */
+.card-premium {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.3s ease,
+              border-color 0.3s ease;
+}
+.card-premium:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(30, 92, 69, 0.12), 0 4px 16px rgba(0, 0, 0, 0.06);
+  border-color: rgba(30, 92, 69, 0.2) !important;
 }
 
 /* ── Glass card hover ── */
@@ -101,14 +200,7 @@ body {
   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.35);
 }
 
-/* ── Carousel controls ── */
-.carousel-arrow {
-  transition: background-color 0.18s ease, transform 0.18s ease;
-}
-.carousel-arrow:hover {
-  background-color: rgba(255, 255, 255, 0.28) !important;
-  transform: translateY(-50%) scale(1.1);
-}
+/* ── Carousel thumbnail buttons ── */
 .carousel-thumb-btn {
   transition: opacity 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
@@ -119,16 +211,16 @@ body {
 
 /* ── Social icon buttons ── */
 .social-icon {
-  transition: color 0.18s ease, transform 0.18s ease;
+  transition: color 0.18s ease, transform 0.18s ease, background 0.18s ease;
 }
 .social-icon:hover {
   transform: translateY(-3px) scale(1.12);
   color: #f97316 !important;
+  background: rgba(249, 115, 22, 0.12) !important;
 }
 
 /* ── Mobile responsive overrides ── */
 @media (max-width: 767px) {
-  /* Methodology: remove right border and reset padding when stacked */
   .pillar-item {
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -137,16 +229,12 @@ body {
     padding-top: 36px !important;
     padding-bottom: 36px !important;
   }
-  /* Testimonial cols: remove vertical dividers when stacked */
   .testimonial-col {
     padding-left: 0 !important;
     padding-right: 0 !important;
     border-right: none !important;
   }
-  /* Sections: tighten vertical padding on mobile */
   section { padding-top: 72px !important; padding-bottom: 72px !important; }
-  /* Carousel arrows: smaller on mobile */
-  .carousel-arrow { width: 36px !important; height: 36px !important; font-size: 16px !important; }
 }
 
 /* ── Testimonial marquee ── */
@@ -154,13 +242,5 @@ body {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
 }
-@keyframes marqueeRight {
-  from { transform: translateX(-50%); }
-  to   { transform: translateX(0); }
-}
-.marquee-left  { animation: marqueeLeft  28s linear infinite; }
-.marquee-right { animation: marqueeRight 36s linear infinite; }
-.marquee-outer:hover .marquee-left,
-.marquee-outer:hover .marquee-right {
-  animation-play-state: paused;
-}
+.marquee-left { animation: marqueeLeft 36s linear infinite; }
+.marquee-outer:hover .marquee-left { animation-play-state: paused; }

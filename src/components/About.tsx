@@ -3,7 +3,7 @@ import Reveal from "./Reveal";
 
 export default function About() {
   return (
-    <section id="about" style={{ background: "#fff", padding: "100px 0" }}>
+    <section id="about" style={{ background: "#f4f3f2", padding: "100px 0" }}>
       <div style={{ maxWidth: 1160, margin: "0 auto", padding: "0 24px" }}>
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
@@ -17,14 +17,14 @@ export default function About() {
                   overflow: "hidden",
                   maxWidth: 420,
                   width: "100%",
+                  aspectRatio: "3/4",
                 }}
               >
                 <Image
                   src="/images/founder-blue.jpg"
                   alt="Dr. Mary Oyewole-Asowata, Founder of Well-being Matters"
-                  width={420}
-                  height={560}
-                  style={{ width: "100%", height: "auto", display: "block" }}
+                  fill
+                  style={{ objectFit: "cover", objectPosition: "top center" }}
                   sizes="(max-width: 1024px) 80vw, 420px"
                 />
                 <div

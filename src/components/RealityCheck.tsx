@@ -9,7 +9,7 @@ const symptoms = [
 
 export default function RealityCheck() {
   return (
-    <section style={{ background: "#fff", padding: "100px 0" }}>
+    <section style={{ background: "#f4f3f2", padding: "100px 0" }}>
       <div style={{ maxWidth: 1160, margin: "0 auto", padding: "0 24px" }}>
 
         <div className="grid lg:grid-cols-2 gap-20 items-start">
@@ -63,9 +63,10 @@ export default function RealityCheck() {
               </div>
 
               <a
-                href="https://luma.com/oezpermz"
+                href="https://lu.ma/oezpermz"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="btn-orange"
                 style={{
                   display: "inline-block",
                   padding: "13px 28px",
@@ -77,7 +78,7 @@ export default function RealityCheck() {
                   textDecoration: "none",
                 }}
               >
-                Join the community →
+                Join the Community →
               </a>
             </Reveal>
           </div>

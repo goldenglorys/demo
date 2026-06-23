@@ -13,14 +13,9 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close menu on scroll
-  useEffect(() => {
-    if (menuOpen && scrolled) setMenuOpen(false);
-  }, [scrolled, menuOpen]);
-
   const navLinks = [
-    { label: "Methodology", href: "#methodology" },
-    { label: "Impact", href: "#impact" },
+    { label: "Our Approach", href: "#methodology" },
+    { label: "Community", href: "#impact" },
     { label: "About", href: "#about" },
   ];
 
@@ -34,9 +29,10 @@ export default function Navbar() {
           right: 0,
           zIndex: 50,
           transition: "all 0.3s",
-          background: scrolled || menuOpen ? "rgba(255,255,255,0.95)" : "transparent",
-          backdropFilter: scrolled || menuOpen ? "blur(12px)" : "none",
-          borderBottom: scrolled ? "1px solid rgba(0,0,0,0.08)" : "none",
+          background: scrolled || menuOpen ? "rgba(244, 243, 242)" : "transparent",
+          backdropFilter: scrolled || menuOpen ? "blur(14px)" : "none",
+          WebkitBackdropFilter: scrolled || menuOpen ? "blur(14px)" : "none",
+          borderBottom: scrolled ? "1px solid rgba(0,0,0,0.07)" : "none",
         }}
       >
         <nav
@@ -44,19 +40,19 @@ export default function Navbar() {
             maxWidth: 1160,
             margin: "0 auto",
             padding: "0 24px",
-            height: 64,
+            height: 76,
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
             gap: 16,
           }}
         >
-          {/* Logo — cropped tightly to content area */}
+          {/* Logo */}
           <a href="#" style={{ textDecoration: "none", flexShrink: 0 }}>
             <div
               style={{
-                width: 120,
-                height: 44,
+                width: 160,
+                height: 58,
                 borderRadius: 8,
                 overflow: "hidden",
                 position: "relative",
@@ -68,38 +64,34 @@ export default function Navbar() {
                 fill
                 style={{ objectFit: "cover", objectPosition: "center 42%" }}
                 priority
-                sizes="120px"
+                sizes="160px"
               />
             </div>
           </a>
 
-          {/* Pill nav — desktop only */}
+          {/* Nav links — desktop, no group pill container */}
           <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 4,
-              background: scrolled ? "rgba(0,0,0,0.05)" : "rgba(255,255,255,0.12)",
-              border: scrolled ? "1px solid rgba(0,0,0,0.1)" : "1px solid rgba(255,255,255,0.2)",
-              borderRadius: 999,
-              padding: "4px",
-              transition: "all 0.3s",
-            }}
             className="hidden md:flex"
+            style={{
+              alignItems: "center",
+              gap: 2,
+            }}
           >
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
+                className="nav-link"
                 style={{
                   fontSize: 13,
                   fontWeight: 600,
-                  padding: "7px 16px",
+                  padding: "8px 18px",
                   borderRadius: 999,
-                  color: scrolled ? "#444" : "rgba(255,255,255,0.9)",
+                  color: scrolled ? "#333" : "rgba(255,255,255,0.88)",
                   textDecoration: "none",
                   transition: "all 0.2s",
                   whiteSpace: "nowrap",
+                  letterSpacing: "0.01em",
                 }}
               >
                 {link.label}
@@ -119,7 +111,6 @@ export default function Navbar() {
                 fontWeight: 700,
                 padding: "9px 20px",
                 borderRadius: 999,
-                background: "#f97316",
                 color: "#fff",
                 textDecoration: "none",
               }}
@@ -127,7 +118,7 @@ export default function Navbar() {
               Join the Community
             </a>
 
-            {/* Hamburger — mobile only */}
+            {/* Hamburger — mobile only. No inline display so md:hidden works */}
             <button
               onClick={() => setMenuOpen((o) => !o)}
               aria-label={menuOpen ? "Close menu" : "Open menu"}
@@ -135,7 +126,6 @@ export default function Navbar() {
               style={{
                 width: 40,
                 height: 40,
-                display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 background: "transparent",
@@ -198,7 +188,6 @@ export default function Navbar() {
                     display: "block",
                     padding: "15px 24px",
                     borderRadius: 999,
-                    background: "#f97316",
                     color: "#fff",
                     fontSize: 15,
                     fontWeight: 700,

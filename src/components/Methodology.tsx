@@ -44,7 +44,7 @@ export default function Methodology() {
               Evidence-based strategies for sustainable change.
             </h2>
             <p style={{ fontSize: 16, lineHeight: 1.8, color: "#666" }}>
-              In our community we use proven behaviour change strategies. As many of our members have goals to build sustainable lifestyle that improve their overall well-being without diet restriction.
+              In our community we use proven behaviour change strategies — because sustainable well-being is built on consistency, not restriction.
             </p>
           </div>
         </Reveal>
