@@ -213,11 +213,11 @@ export default function Hero() {
         </div>
       </section>
 
-      {/* White peek rounding up from below */}
+      {/* Rounded transition from hero to first section */}
       <div
         style={{
           height: 48,
-          background: "#fff",
+          background: "#f4f3f2",
           borderRadius: "40px 40px 0 0",
           marginTop: -48,
           position: "relative",

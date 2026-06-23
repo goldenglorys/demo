@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Reveal from "./Reveal";
 
 const testimonials = [
@@ -52,7 +55,7 @@ function PersonIcon() {
 
 function Stars() {
   return (
-    <div style={{ display: "flex", gap: 3, marginBottom: 16 }}>
+    <div style={{ display: "flex", gap: 3, marginBottom: 14 }}>
       {[0, 1, 2, 3, 4].map((i) => (
         <svg key={i} width="12" height="12" viewBox="0 0 24 24" fill="#1e5c45">
           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
@@ -63,6 +66,9 @@ function Stars() {
 }
 
 function Card({ quote, name, detail }: { quote: string; name: string; detail: string }) {
+  const [expanded, setExpanded] = useState(false);
+  const isLong = quote.length > 180;
+
   return (
     <div
       className="card-premium"
@@ -86,17 +92,40 @@ function Card({ quote, name, detail }: { quote: string; name: string; detail: st
           lineHeight: 1.8,
           color: "#444",
           fontStyle: "italic",
-          marginBottom: 20,
-          display: "-webkit-box",
-          WebkitLineClamp: 5,
-          WebkitBoxOrient: "vertical",
-          overflow: "hidden",
+          marginBottom: 12,
+          ...((!expanded && isLong) ? {
+            display: "-webkit-box",
+            WebkitLineClamp: 5,
+            WebkitBoxOrient: "vertical",
+            overflow: "hidden",
+          } : {}),
         }}
       >
         &ldquo;{quote}&rdquo;
       </p>
 
-      {/* Author row */}
+      {isLong && (
+        <button
+          onClick={() => setExpanded((e) => !e)}
+          style={{
+            alignSelf: "flex-start",
+            marginBottom: 16,
+            padding: "4px 12px",
+            borderRadius: 999,
+            border: "1px solid rgba(30,92,69,0.25)",
+            background: "rgba(30,92,69,0.06)",
+            color: "#1e5c45",
+            fontSize: 11,
+            fontWeight: 700,
+            cursor: "pointer",
+            letterSpacing: "0.02em",
+            transition: "all 0.18s ease",
+          }}
+        >
+          {expanded ? "Show less ↑" : "Read more ↓"}
+        </button>
+      )}
+
       <div style={{ display: "flex", alignItems: "center", gap: 10, marginTop: "auto" }}>
         <div
           style={{
@@ -127,7 +156,6 @@ export default function Testimonials() {
   return (
     <section style={{ background: "#f8f6f2", padding: "100px 0", overflow: "hidden" }}>
 
-      {/* Header */}
       <div style={{ maxWidth: 1160, margin: "0 auto", padding: "0 24px", marginBottom: 56 }}>
         <Reveal>
           <h2
@@ -147,14 +175,11 @@ export default function Testimonials() {
         </Reveal>
       </div>
 
-      {/* Single-row marquee */}
-      <div
-        className="marquee-outer"
-        style={{ overflow: "hidden" }}
-      >
+      {/* Single-row marquee — hover to pause, then click Read more */}
+      <div className="marquee-outer" style={{ overflow: "hidden" }}>
         <div
           className="marquee-left"
-          style={{ display: "inline-flex", gap: 20 }}
+          style={{ display: "inline-flex", gap: 20, willChange: "transform" }}
         >
           {row.map((card, i) => (
             <Card key={i} {...card} />

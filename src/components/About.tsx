@@ -24,6 +24,7 @@ export default function About() {
                   src="/images/founder-blue.jpg"
                   alt="Dr. Mary Oyewole-Asowata, Founder of Well-being Matters"
                   fill
+                  loading="lazy"
                   style={{ objectFit: "cover", objectPosition: "top center" }}
                   sizes="(max-width: 1024px) 80vw, 420px"
                 />
