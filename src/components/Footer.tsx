@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import { LINKS } from "@/lib/links";
 
 function IconWhatsApp() {
   return (
@@ -35,7 +37,7 @@ function IconEmail() {
 
 const socials = [
   { label: "WhatsApp", href: "https://whatsapp.com/channel/0029Vb7OJeaL7UVYCgg56E2r", Icon: IconWhatsApp },
-  { label: "Instagram", href: "https://instagram.com/the_wellbeing_matters", Icon: IconInstagram },
+  { label: "Instagram", href: "https://instagram.com/nutritionwithdrmary", Icon: IconInstagram },
   { label: "YouTube", href: "https://youtube.com/@TheWell-beingMatters", Icon: IconYouTube },
   { label: "Email", href: "mailto:well-beingmattersng@outlook.com", Icon: IconEmail },
 ];
@@ -98,7 +100,7 @@ export default function Footer() {
             Book a Consultation
           </a>
           <a
-            href="https://lu.ma/oezpermz"
+            href={LINKS.community}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-ghost"
@@ -132,7 +134,7 @@ export default function Footer() {
         }}
       >
         {/* Logo */}
-        <a href="#" style={{ textDecoration: "none", flexShrink: 0 }}>
+        <Link href="/" style={{ textDecoration: "none", flexShrink: 0 }}>
           <div
             style={{
               width: 150,
@@ -150,7 +152,7 @@ export default function Footer() {
               sizes="150px"
             />
           </div>
-        </a>
+        </Link>
 
         {/* Social icons */}
         <nav aria-label="Social links" style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>

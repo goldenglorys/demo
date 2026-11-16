@@ -2,6 +2,7 @@
 
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import { LINKS } from "@/lib/links";
 
 const HeroShader = dynamic(() => import("./HeroShader"), { ssr: false });
 
@@ -191,7 +192,7 @@ export default function Hero() {
               Book a Consultation
             </a>
             <a
-              href="https://lu.ma/oezpermz"
+              href={LINKS.community}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-ghost"

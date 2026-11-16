@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { LINKS } from "@/lib/links";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -14,9 +16,11 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: "Our Approach", href: "#methodology" },
-    { label: "Community", href: "#impact" },
-    { label: "About", href: "#about" },
+    { label: "Our Approach", href: "/#methodology" },
+    { label: "Community", href: "/#impact" },
+    { label: "Podcast", href: "/podcast" },
+    { label: "Membership", href: "/#membership" },
+    { label: "About", href: "/#about" },
   ];
 
   return (
@@ -48,7 +52,7 @@ export default function Navbar() {
           }}
         >
           {/* Logo */}
-          <a href="#" style={{ textDecoration: "none", flexShrink: 0 }}>
+          <Link href="/" style={{ textDecoration: "none", flexShrink: 0 }}>
             <div
               style={{
                 width: 160,
@@ -67,9 +71,9 @@ export default function Navbar() {
                 sizes="160px"
               />
             </div>
-          </a>
+          </Link>
 
-          {/* Nav links — desktop, no group pill container */}
+          {/* Nav links - desktop, no group pill container */}
           <div
             className="hidden md:flex"
             style={{
@@ -102,7 +106,7 @@ export default function Navbar() {
           <div style={{ display: "flex", alignItems: "center", gap: 10, flexShrink: 0 }}>
             {/* Desktop CTA */}
             <a
-              href="https://lu.ma/oezpermz"
+              href={LINKS.community}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-orange hidden md:inline-block"
@@ -118,7 +122,7 @@ export default function Navbar() {
               Join the Community
             </a>
 
-            {/* Hamburger — mobile only. No inline display so md:hidden works */}
+            {/* Hamburger - mobile only. No inline display so md:hidden works */}
             <button
               onClick={() => setMenuOpen((o) => !o)}
               aria-label={menuOpen ? "Close menu" : "Open menu"}
@@ -179,7 +183,7 @@ export default function Navbar() {
               ))}
               <div style={{ marginTop: 12, paddingTop: 12, borderTop: "1px solid rgba(0,0,0,0.07)" }}>
                 <a
-                  href="https://lu.ma/oezpermz"
+                  href={LINKS.community}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setMenuOpen(false)}
