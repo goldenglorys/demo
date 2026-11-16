@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Reveal from "./Reveal";
+import { LINKS } from "@/lib/links";
 
 export default function About() {
   return (
@@ -68,31 +69,35 @@ export default function About() {
 
             <Reveal delay={1}>
               <p style={{ fontSize: 16, lineHeight: 1.85, color: "#555", marginBottom: 20 }}>
-                As a way of giving back to society, Dr. Asowata founded the
-                Well-being Matters community to channel her expertise and skills
-                in public health nutrition to provide structured nutrition
-                accountability for women and busy mothers to build the food
-                literacy skills needed for healthy living.
+                Mary Oyewole-Asowata, Ph.D is a nutrition expert and the founder
+                of Well-being Matters Consults — an accountability-based
+                community that empowers families with accessible, evidence-based
+                health and nutrition education.
               </p>
             </Reveal>
 
             <Reveal delay={2}>
               <p style={{ fontSize: 16, lineHeight: 1.85, color: "#555", marginBottom: 20 }}>
-                The Well-being Matters mission is to empower beneficiaries with
-                food literacy skills and provide community engagement to support
-                healthy diets and lifestyles. We believe everyone deserves
-                access to resources that empower them to make informed decisions
-                about their health, regardless of their lived experiences and
-                demographics.
+                As a researcher, she works in the Department of Agricultural and
+                Human Sciences at North Carolina State University. Dr. Mary
+                Oyewole-Asowata maintains an active presence on social media,
+                where she regularly posts healthy eating and lifestyle content.
+                Her digital courses support mothers and families seeking
+                balanced approaches to feeding their families.
               </p>
             </Reveal>
 
             <Reveal delay={3}>
               <p style={{ fontSize: 16, lineHeight: 1.85, color: "#555", marginBottom: 36 }}>
-                Beyond Well-being Matters, Dr. Mary Oyewole-Asowata is a
-                mixed-method researcher whose work focuses on how community
-                environments affect nutrition, improving food access, and shaping
-                the dietary behaviour of rural families within North Carolina.
+                Follow Dr. Mary on Instagram:{" "}
+                <a
+                  href={LINKS.personalInstagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "#1e5c45", fontWeight: 600 }}
+                >
+                  @nutritionwithdrmary
+                </a>
               </p>
             </Reveal>
 

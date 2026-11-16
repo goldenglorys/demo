@@ -63,7 +63,7 @@ export default function RealityCheck() {
               </div>
 
               <a
-                href="https://lu.ma/oezpermz"
+                href="https://bit.ly/CoachwithDrMary"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-orange"

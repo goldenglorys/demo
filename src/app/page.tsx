@@ -5,6 +5,7 @@ import Methodology from "@/components/Methodology";
 import Sessions from "@/components/Sessions";
 import Testimonials from "@/components/Testimonials";
 import CommunityImpact from "@/components/CommunityImpact";
+import Membership from "@/components/Membership";
 import ResourcesCTA from "@/components/ResourcesCTA";
 import About from "@/components/About";
 import Footer from "@/components/Footer";
@@ -20,6 +21,7 @@ export default function Home() {
         <Sessions />
         <Testimonials />
         <CommunityImpact />
+        <Membership />
         <ResourcesCTA />
         <About />
       </main>

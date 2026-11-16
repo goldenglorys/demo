@@ -191,7 +191,7 @@ export default function Hero() {
               Book a Consultation
             </a>
             <a
-              href="https://lu.ma/oezpermz"
+              href="https://bit.ly/CoachwithDrMary"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-ghost"

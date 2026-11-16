@@ -114,7 +114,7 @@ export default function Sessions() {
             <Reveal delay={4}>
               <div style={{ paddingTop: 20, borderTop: "1px solid rgba(0,0,0,0.08)" }}>
                 <a
-                  href="https://lu.ma/oezpermz"
+                  href="https://bit.ly/CoachwithDrMary"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-outline-orange"

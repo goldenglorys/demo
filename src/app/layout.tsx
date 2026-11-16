@@ -194,7 +194,7 @@ const jsonLd = {
         {
           "@type": "Offer",
           name: "Free Community Membership",
-          url: "https://lu.ma/oezpermz",
+          url: "https://bit.ly/CoachwithDrMary",
         },
         {
           "@type": "Offer",

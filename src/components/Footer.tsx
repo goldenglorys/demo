@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 function IconWhatsApp() {
   return (
@@ -98,7 +99,7 @@ export default function Footer() {
             Book a Consultation
           </a>
           <a
-            href="https://lu.ma/oezpermz"
+            href="https://bit.ly/CoachwithDrMary"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-ghost"
@@ -132,7 +133,7 @@ export default function Footer() {
         }}
       >
         {/* Logo */}
-        <a href="#" style={{ textDecoration: "none", flexShrink: 0 }}>
+        <Link href="/" style={{ textDecoration: "none", flexShrink: 0 }}>
           <div
             style={{
               width: 150,
@@ -150,7 +151,7 @@ export default function Footer() {
               sizes="150px"
             />
           </div>
-        </a>
+        </Link>
 
         {/* Social icons */}
         <nav aria-label="Social links" style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
