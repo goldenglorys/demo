@@ -5,7 +5,12 @@ import { useEffect, useRef, useState } from "react";
 
 export default function HeroShader() {
   const ref = useRef<HTMLDivElement>(null);
+  const [reduced, setReduced] = useState(false);
   const [dim, setDim] = useState({ width: 1440, height: 810 });
+
+  useEffect(() => {
+    setReduced(window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+  }, []);
 
   useEffect(() => {
     const el = ref.current;
@@ -39,7 +44,7 @@ export default function HeroShader() {
         size={0.28}
         sizeRange={0.18}
         spreading={0.9}
-        speed={0.35}
+        speed={reduced ? 0 : 0.35}
         scale={0.28}
       />
     </div>

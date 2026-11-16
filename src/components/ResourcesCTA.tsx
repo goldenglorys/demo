@@ -26,7 +26,7 @@ export default function ResourcesCTA() {
             <p style={{ fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.6)", marginBottom: 36 }}>
               Discover the nutritional power of African cuisine. Build meals
               that nourish your body using familiar, culturally rooted
-              ingredients — making healthy eating feel like home, not restriction.
+              ingredients, making healthy eating feel like home, not restriction.
             </p>
             <a
               href="https://selar.com/71175r894e"
@@ -48,7 +48,7 @@ export default function ResourcesCTA() {
             </a>
           </Reveal>
 
-          {/* Right — what's inside, as clean list */}
+          {/* Right - what's inside, as clean list */}
           <Reveal delay={2}>
             <div style={{ borderTop: "1px solid rgba(255,255,255,0.15)" }}>
               {[

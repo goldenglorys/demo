@@ -67,7 +67,7 @@ body {
 
 /* ── Liquid glass buttons ── */
 
-/* Orange — primary CTA */
+/* Orange - primary CTA */
 .btn-orange {
   position: relative;
   background: rgba(249, 115, 22, 0.92) !important;
@@ -96,7 +96,7 @@ body {
     0 2px 8px rgba(249, 115, 22, 0.3) !important;
 }
 
-/* Green — secondary CTA */
+/* Green - secondary CTA */
 .btn-green {
   position: relative;
   background: rgba(30, 92, 69, 0.92) !important;
@@ -144,7 +144,7 @@ body {
   transform: translateY(0) scale(0.98);
 }
 
-/* Ghost — on dark backgrounds, keep blur here since it's on hero image */
+/* Ghost - on dark backgrounds, keep blur here since it's on hero image */
 .btn-ghost {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -232,3 +232,22 @@ body {
 }
 .marquee-left { animation: marqueeLeft 36s linear infinite; }
 .marquee-outer:hover .marquee-left { animation-play-state: paused; }
+
+/* ── Anchor links land below the fixed header ── */
+section[id] {
+  scroll-margin-top: 76px;
+}
+
+/* ── Respect reduced-motion preferences ── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .float-a, .float-b, .marquee-left { animation: none !important; }
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+
+/* ── Visible keyboard focus ── */
+a:focus-visible, button:focus-visible {
+  outline: 3px solid #f97316;
+  outline-offset: 3px;
+}

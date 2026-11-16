@@ -39,7 +39,7 @@ export default function Membership() {
                 Well-being Matters+ is an educational membership community and is
                 not a substitute for individualized medical care, diagnosis, or
                 treatment. Everything inside is designed to help you feel more
-                informed, more prepared, and more confident — not to replace
+                informed, more prepared, and more confident, not to replace
                 your relationship with your healthcare providers.
               </p>
               <p style={{ fontSize: 16, lineHeight: 1.85, color: "#555", marginBottom: 32 }}>
@@ -103,7 +103,7 @@ export default function Membership() {
                     Course launch in January
                   </p>
                   <h3 style={{ fontSize: 26, fontWeight: 800, letterSpacing: "-0.02em", marginBottom: 14 }}>
-                    Online courses — join the waitlist
+                    Online courses: join the waitlist
                   </h3>
                   <p style={{ fontSize: 15, lineHeight: 1.8, color: "rgba(255,255,255,0.7)", marginBottom: 28 }}>
                     Our video-based courses launch in January. Register for the

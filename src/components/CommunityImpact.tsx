@@ -97,7 +97,6 @@ export default function CommunityImpact() {
                         fill
                         style={{ objectFit: "cover" }}
                         sizes="(max-width: 1200px) 100vw, 1160px"
-                        priority={i === 0}
                       />
                       <div
                         style={{
@@ -178,7 +177,7 @@ export default function CommunityImpact() {
                 </div>
               </div>
 
-              {/* Thumbnail strip — desktop */}
+              {/* Thumbnail strip - desktop */}
               <div
                 style={{
                   display: "flex",
@@ -251,7 +250,6 @@ export default function CommunityImpact() {
                         fill
                         style={{ objectFit: "cover" }}
                         sizes="100vw"
-                        priority={i === 0}
                       />
                     </div>
                   ))}
@@ -321,7 +319,7 @@ export default function CommunityImpact() {
                 </p>
               </div>
 
-              {/* Dot indicators — mobile */}
+              {/* Dot indicators - mobile */}
               <div
                 style={{
                   display: "flex",

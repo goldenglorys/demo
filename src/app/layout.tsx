@@ -101,9 +101,9 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/images/logo.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Well-being Matters — Nutrition Accountability Community",
+        width: 1080,
+        height: 1350,
+        alt: "Well-being Matters | Nutrition Accountability Community",
       },
     ],
   },
@@ -139,7 +139,7 @@ const jsonLd = {
       url: "https://thewellbeingmatters.com",
       logo: "https://thewellbeingmatters.com/images/logo.jpg",
       sameAs: [
-        "https://instagram.com/the_wellbeing_matters",
+        "https://instagram.com/nutritionwithdrmary",
         "https://youtube.com/@TheWell-beingMatters",
         "https://whatsapp.com/channel/0029Vb7OJeaL7UVYCgg56E2r",
       ],
@@ -169,11 +169,6 @@ const jsonLd = {
       url: "https://thewellbeingmatters.com",
       name: "Well-being Matters",
       publisher: { "@id": "https://thewellbeingmatters.com/#organization" },
-      potentialAction: {
-        "@type": "SearchAction",
-        target: "https://thewellbeingmatters.com/?s={search_term_string}",
-        "query-input": "required name=search_term_string",
-      },
     },
     {
       "@type": "HealthAndBeautyBusiness",
@@ -182,7 +177,6 @@ const jsonLd = {
       description:
         "Nutrition accountability community providing 1-on-1 coaching, food literacy education, and community support for women and busy mothers.",
       url: "https://thewellbeingmatters.com",
-      telephone: "",
       email: "well-beingmattersng@outlook.com",
       founder: { "@id": "https://thewellbeingmatters.com/#founder" },
       offers: [

@@ -6,7 +6,7 @@ import Reveal from "./Reveal";
 const testimonials = [
   {
     quote:
-      "Dr. Mary has played such an important and inspiring role in my wellness journey. Her deep knowledge of nutrition and genuine passion for helping people make healthier choices truly stand out. The personalized food plan she created for me has been life-changing, and her consistent follow-ups keep me motivated. She also created a supportive community where she shares helpful meal ideas, nutrition tips, and encouragement that make healthy living feel achievable. Dr. Mary goes above and beyond for her clients, and her care shines through in everything she does. I'd gladly recommend her to anyone looking to improve their health and lifestyle — she's simply outstanding!",
+      "Dr. Mary has played such an important and inspiring role in my wellness journey. Her deep knowledge of nutrition and genuine passion for helping people make healthier choices truly stand out. The personalized food plan she created for me has been life-changing, and her consistent follow-ups keep me motivated. She also created a supportive community where she shares helpful meal ideas, nutrition tips, and encouragement that make healthy living feel achievable. Dr. Mary goes above and beyond for her clients, and her care shines through in everything she does. I'd gladly recommend her to anyone looking to improve their health and lifestyle - she's simply outstanding!",
     name: "Adedoyin",
     detail: "Germany · 7-Day Healthy Habits Challenge",
   },
@@ -175,7 +175,7 @@ export default function Testimonials() {
         </Reveal>
       </div>
 
-      {/* Single-row marquee — hover to pause, then click Read more */}
+      {/* Single-row marquee - hover to pause, then click Read more */}
       <div className="marquee-outer" style={{ overflow: "hidden" }}>
         <div
           className="marquee-left"

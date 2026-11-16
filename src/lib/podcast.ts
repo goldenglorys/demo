@@ -56,7 +56,9 @@ function cleanTitle(raw: string): { title: string; label?: string } {
   if (parts.length > 1 && /^episode\s*\d+$/i.test(parts[parts.length - 1])) {
     label = parts.pop()!.replace(/\s+/, " ");
   }
-  return { title: parts.join(" | ").replace(/\s+/g, " "), label };
+  // House style: no em/en dashes, even if the sheet author typed them.
+  const title = parts.join(" | ").replace(/\s*[\u2013\u2014]\s*/g, " - ").replace(/\s+/g, " ");
+  return { title, label };
 }
 
 const normTitle = (t: string) => t.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();

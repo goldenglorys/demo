@@ -36,7 +36,7 @@ function IconEmail() {
 
 const socials = [
   { label: "WhatsApp", href: "https://whatsapp.com/channel/0029Vb7OJeaL7UVYCgg56E2r", Icon: IconWhatsApp },
-  { label: "Instagram", href: "https://instagram.com/the_wellbeing_matters", Icon: IconInstagram },
+  { label: "Instagram", href: "https://instagram.com/nutritionwithdrmary", Icon: IconInstagram },
   { label: "YouTube", href: "https://youtube.com/@TheWell-beingMatters", Icon: IconYouTube },
   { label: "Email", href: "mailto:well-beingmattersng@outlook.com", Icon: IconEmail },
 ];

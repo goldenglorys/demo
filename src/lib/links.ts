@@ -5,7 +5,7 @@ export const LINKS = {
   consultation: "https://selar.com/9606812642",
   africanRecipes: "https://selar.com/71175r894e",
   youtube: "https://youtube.com/@TheWell-beingMatters",
-  personalInstagram: "https://instagram.com/nutritionwithdrmary",
+  instagram: "https://instagram.com/nutritionwithdrmary",
   // TODO(client): paste the real Constant Contact signup link, either here or
   // via the NEXT_PUBLIC_CONSTANT_CONTACT_URL env var in Vercel.
   newsletter: process.env.NEXT_PUBLIC_CONSTANT_CONTACT_URL || "https://bit.ly/CoachwithDrMary",

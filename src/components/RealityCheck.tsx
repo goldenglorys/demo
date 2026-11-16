@@ -83,7 +83,7 @@ export default function RealityCheck() {
             </Reveal>
           </div>
 
-          {/* Right — symptoms as large editorial text */}
+          {/* Right - symptoms as large editorial text */}
           <div>
             <Reveal>
               <p

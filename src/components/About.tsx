@@ -70,7 +70,7 @@ export default function About() {
             <Reveal delay={1}>
               <p style={{ fontSize: 16, lineHeight: 1.85, color: "#555", marginBottom: 20 }}>
                 Mary Oyewole-Asowata, Ph.D is a nutrition expert and the founder
-                of Well-being Matters Consults — an accountability-based
+                of Well-being Matters Consults, an accountability-based
                 community that empowers families with accessible, evidence-based
                 health and nutrition education.
               </p>
@@ -91,7 +91,7 @@ export default function About() {
               <p style={{ fontSize: 16, lineHeight: 1.85, color: "#555", marginBottom: 36 }}>
                 Follow Dr. Mary on Instagram:{" "}
                 <a
-                  href={LINKS.personalInstagram}
+                  href={LINKS.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ color: "#1e5c45", fontWeight: 600 }}

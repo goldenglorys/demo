@@ -72,7 +72,7 @@ export default function Navbar() {
             </div>
           </Link>
 
-          {/* Nav links — desktop, no group pill container */}
+          {/* Nav links - desktop, no group pill container */}
           <div
             className="hidden md:flex"
             style={{
@@ -121,7 +121,7 @@ export default function Navbar() {
               Join the Community
             </a>
 
-            {/* Hamburger — mobile only. No inline display so md:hidden works */}
+            {/* Hamburger - mobile only. No inline display so md:hidden works */}
             <button
               onClick={() => setMenuOpen((o) => !o)}
               aria-label={menuOpen ? "Close menu" : "Open menu"}

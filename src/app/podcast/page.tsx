@@ -36,7 +36,7 @@ export default async function PodcastPage() {
               Welcome to the Well-being Matters Podcast
             </h1>
             <p style={{ fontSize: 19, fontWeight: 600, lineHeight: 1.6, marginBottom: 16 }}>
-              I&apos;m so glad you&apos;re here! — Dr. Mary Oyewole-Asowata
+              I&apos;m so glad you&apos;re here! Dr. Mary Oyewole-Asowata.
             </p>
             <p style={{ fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.75)", marginBottom: 32 }}>
               This is a space for us to connect through conversations about

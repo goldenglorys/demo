@@ -44,12 +44,12 @@ export default function Methodology() {
               Evidence-based strategies for sustainable change.
             </h2>
             <p style={{ fontSize: 16, lineHeight: 1.8, color: "#666" }}>
-              In our community we use proven behaviour change strategies — because sustainable well-being is built on consistency, not restriction.
+              In our community we use proven behaviour change strategies, because sustainable well-being is built on consistency, not restriction.
             </p>
           </div>
         </Reveal>
 
-        {/* Three pillars — editorial columns, no card borders */}
+        {/* Three pillars - editorial columns, no card borders */}
         <div className="grid md:grid-cols-3 gap-0" style={{ borderTop: "1px solid rgba(0,0,0,0.1)" }}>
           {pillars.map((pillar, i) => (
             <Reveal key={pillar.num} delay={(i + 1) as 1 | 2 | 3}>
