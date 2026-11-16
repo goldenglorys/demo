@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { LINKS } from "@/lib/links";
 
 function IconWhatsApp() {
   return (
@@ -99,7 +100,7 @@ export default function Footer() {
             Book a Consultation
           </a>
           <a
-            href="https://bit.ly/CoachwithDrMary"
+            href={LINKS.community}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-ghost"

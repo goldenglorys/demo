@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { LINKS } from "@/lib/links";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -188,7 +189,7 @@ const jsonLd = {
         {
           "@type": "Offer",
           name: "Free Community Membership",
-          url: "https://bit.ly/CoachwithDrMary",
+          url: LINKS.community,
         },
         {
           "@type": "Offer",

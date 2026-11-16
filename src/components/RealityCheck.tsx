@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import { LINKS } from "@/lib/links";
 
 const symptoms = [
   "Low energy",
@@ -63,7 +64,7 @@ export default function RealityCheck() {
               </div>
 
               <a
-                href="https://bit.ly/CoachwithDrMary"
+                href={LINKS.community}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-orange"

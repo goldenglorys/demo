@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { LINKS } from "@/lib/links";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -105,7 +106,7 @@ export default function Navbar() {
           <div style={{ display: "flex", alignItems: "center", gap: 10, flexShrink: 0 }}>
             {/* Desktop CTA */}
             <a
-              href="https://bit.ly/CoachwithDrMary"
+              href={LINKS.community}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-orange hidden md:inline-block"
@@ -182,7 +183,7 @@ export default function Navbar() {
               ))}
               <div style={{ marginTop: 12, paddingTop: 12, borderTop: "1px solid rgba(0,0,0,0.07)" }}>
                 <a
-                  href="https://bit.ly/CoachwithDrMary"
+                  href={LINKS.community}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setMenuOpen(false)}
