@@ -1,7 +1,7 @@
 // Single source of truth for outbound links. Change a link here and every
 // button on the site updates.
 // The one place to change the community link; every button and the newsletter/waitlist fallbacks use it.
-const COMMUNITY = "https://bit.ly/CoachwithDrMary";
+const COMMUNITY = "https://forms.cloud.microsoft/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAELtbXFUMk5EN05QODlKUlFUUExQSVNRUlVOQjJVUi4u&origin=lprLink&route=shorturl";
 
 export const LINKS = {
   community: COMMUNITY,
